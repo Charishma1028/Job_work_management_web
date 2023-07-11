@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* General styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav {
+    position: relative;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon .menu-line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 20px 0;
+    }
+
+    .menu li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Floating colors background */
+
+@keyframes floatingColors {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+
+    100% {
+        transform: translateY(-200vh) rotate(720deg);
+    }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -50vh;
+    left: -50vw;
+    width: 200vw;
+    height: 200vh;
+    z-index: -1;
+    background-image: linear-gradient(to right,
+            #062bd1,
+            #08599f,
+            #2c92e5,
+            #35bfff,
+            #31e9e9,
+            #56d8f9,
+            #55d3f6,
+            #3be3f3,
+            #3ef6d1,
+            #62f7d2,
+            #1cfaca,
+            #1df18e);
+    background-size: 200vw 200vh;
+    animation: floatingColors 20s linear infinite;
+}
+
+/* Container styles */
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.password-input {
+    position: relative;
+}
+
+#togglePassword {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.google-login {
+    margin-top: 20px;
+}
+
+.google-login span {
+    color: #fff;
+    margin-right: 5px;
+}
+
+/* Font Awesome icons */
+
+.fa-eye-slash {
+    display: none;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+        margin: 50px auto;
+    }
+}
+
+.eye {
+    color: #0a0a0a;
+    font-size: 20px;
+}
+
+.eye_span {
+    color: #0a0a0a;
+    position: relative;
+    right: 15px;
+    bottom: 7px;
+}
+
+.show-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #070707;
+    z-index: 999;
+    display: none;
+}
+
+#nav-container {
+    background-color: black;
+
+}
+
+#nav-items {
+    color: white;
+    font-size: 24px;
+    font-family: "Roboto";
+}
+
+#nav-head {
+    color: white;
+    font-size: 26px;
+    font-family: "Roboto";
+}
+
+#nav-icon {
+    background-color: white;
+    border-color: black;
+}
